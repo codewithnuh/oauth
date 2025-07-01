@@ -18,3 +18,8 @@ app.get("/data", (req: Request, res: Response) => {
   ];
   res.json(data);
 });
+
+const PORT = process.env.PORT || 3000; // Use environment variable or default
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
